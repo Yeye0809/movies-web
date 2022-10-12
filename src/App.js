@@ -1,10 +1,12 @@
-import { Navbar } from "./components/Navbar/Navbar";
+import { RouterApp } from "./Routers/RouterApp";
+
+
 
 
 function App() {
   return (
-    <div >
-     <Navbar />
+    <div>
+      <RouterApp />
     </div>
   );
 }

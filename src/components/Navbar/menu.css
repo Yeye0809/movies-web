@@ -1,0 +1,45 @@
+.menu-container{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #212529;
+    opacity: .8;
+    position: absolute;
+}
+.menu-container .container-list {
+    height: 100px;
+    width: 150px;
+    position: relative;
+    left: 125px;
+}
+.menu-container .container-list ul {
+    list-style: none;
+}
+.container-list ul li a:hover {
+    text-decoration: underline;
+    color: #01b4e6;
+}
+
+/* menu series */
+
+.menu-container-series{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #212529;
+    opacity: .8;
+    position: absolute;
+}
+.menu-container-series .container-list {
+    height: 100px;
+    width: 150px;
+    position: relative;
+    left: 200px;
+}
+.menu-container-series .container-list ul {
+    list-style: none;
+}
+.container-list ul li a:hover {
+    text-decoration: underline;
+    color: #01b4e6;
+}

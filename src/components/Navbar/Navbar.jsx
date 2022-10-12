@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export const Navbar = () => {
+export const Navbar = ({handleShowMenuMovies, handleShowMenuSeries}) => {
   return (
     <nav className='navbar navbar-expand-sm navbar-dark bg-dark'>
 
@@ -11,21 +11,25 @@ export const Navbar = () => {
 
       <div className='navbar-collapse'>
         <div className='navbar-nav'>        
-            <NavLink className='nav-item nav-link'>
-              Peliculas
-            </NavLink>
+            <button className='btn nav-item nav-link'
+              onClick={handleShowMenuMovies}
+            >
+              Movies
+            </button>
 
-            <NavLink className='nav-item nav-link'>
+            <button className='btn nav-item nav-link'
+              onClick={handleShowMenuSeries}
+            >
               Series
-            </NavLink>
+            </button>
 
-            {/* <NavLink className='nav-item nav-link'>
+            {/* <button className='nav-item nav-link'>
               Generos
-            </NavLink> */}
+            </button> */}
 
-            <NavLink className='nav-item nav-link'>
-              Buscar
-            </NavLink>           
+            <button className='btn nav-item nav-link'>
+              Search
+            </button>           
         </div>
 
         <div className='navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end '> 
