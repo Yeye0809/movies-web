@@ -27,7 +27,10 @@ export const PopularSeries = () => {
       <div className="row">
         {
           popularSeries.map(serie => (
-            <CardMoovie key={serie.id} title={serie.name} date={serie.first_air_date} posterPath={serie.poster_path}/>
+            <CardMoovie key={serie.id} 
+              title={serie.name} 
+              desp={serie.first_air_date}
+              posterPath={serie.poster_path}/>
           ))
         }
        

@@ -28,7 +28,7 @@ export const PopularMovies = () => {
             <CardMoovie key={movie.id} 
               posterPath={movie.poster_path}
               title={movie.title} 
-              date={movie.release_date}/>
+              desp={movie.release_date}/>
           ))
         }
        
