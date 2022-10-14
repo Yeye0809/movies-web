@@ -16,19 +16,19 @@ export const PopularMovies = () => {
   useEffect(()=>{
     getPopularMovies()
     .then(data => setPopularMovies(data.results))
-  },[])
+  },[]) 
 
 
   return (
     <div className='container mt-5'>
       <h2>Popular Movies</h2>
-      <div className="row">
+      <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
           popularMovies.map(movie => (
             <CardMoovie key={movie.id} 
               posterPath={movie.poster_path}
               title={movie.title} 
-              desp={movie.release_date}/>
+              vote={movie.vote_average}/>
           ))
         }
        

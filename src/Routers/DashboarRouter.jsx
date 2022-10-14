@@ -25,10 +25,10 @@ export const DashboarRouter = () => {
     <>
         <Navbar handleShowMenuMovies={handleShowMenuMovies} handleShowMenuSeries={handleShowMenuSeries}/>
         {
-          showMenuMovies && <MenuMovies />
+          showMenuMovies && <MenuMovies handleShowMenuMovies={handleShowMenuMovies}/>
         }
         {
-          showMenuSeries && <MenuSeries /> 
+          showMenuSeries && <MenuSeries handleShowMenuSeries={handleShowMenuSeries}/> 
         }
         
         <div className='row'>

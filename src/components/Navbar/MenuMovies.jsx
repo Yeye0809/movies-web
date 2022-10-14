@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './menu.css';
 
-export const MenuMovies = () => {
+export const MenuMovies = ({handleShowMenuMovies}) => {
+
+    const location = useLocation();
+
+    
   return (
-    <div className='menu-container'>
+    <div className='menu-container' onClick={handleShowMenuMovies}>
         <div className='container-list navbar navbar-light bg-light rounded-3' >
             <ul>
                 <li>

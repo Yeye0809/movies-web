@@ -53,9 +53,10 @@ export const ScreenSearch = () => {
             results?.map(result =>(
 
               <CardMoovie key={result.id} 
-                title={result.title} 
+                title={(!result.title && result.name)} 
                 posterPath={result.poster_path} 
-                desp={result.overview} />
+                vote={result.vote_average}
+                {...result} />
             ))
            }
 

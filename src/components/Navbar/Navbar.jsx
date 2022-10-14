@@ -1,35 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export const Navbar = ({handleShowMenuMovies, handleShowMenuSeries}) => {
   return (
-    <nav className='navbar navbar-expand-sm navbar-dark bg-dark'>
+    
+    <nav className='navbar navbar-expand-sm navbar-dark bg-dark p-3'>
 
-      <Link className='navbar-brand'>
+      <Link className='navbar-brand' to='/movies'>
         MoviesWeb
       </Link>
 
       <div className='navbar-collapse'>
         <div className='navbar-nav'>        
-            <button className='btn nav-item nav-link'
+            <NavLink className='nav-item nav-link'
               onClick={handleShowMenuMovies}
             >
-              Movies
-            </button>
+              Films
+            </NavLink>
 
-            <button className='btn nav-item nav-link'
+            <NavLink className='nav-item nav-link'
               onClick={handleShowMenuSeries}
             >
               Series
-            </button>
+            </NavLink>
 
             {/* <button className='nav-item nav-link'>
               Generos
             </button> */}
 
-            <button className='btn nav-item nav-link'>
+            <NavLink className='nav-item nav-link' to='/search'>
               Search
-            </button>           
+            </NavLink>           
         </div>
 
         <div className='navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end '> 

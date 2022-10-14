@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import './menu.css';
 
-export const MenuSeries = () => {
+export const MenuSeries = ({handleShowMenuSeries}) => {
   return (
-    <div className='menu-container-series'>
+    <div className='menu-container-series' onClick={handleShowMenuSeries}>
         <div className='container-list navbar navbar-light bg-light rounded-3' >
             <ul>
                 <li>

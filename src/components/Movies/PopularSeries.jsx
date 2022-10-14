@@ -24,12 +24,12 @@ export const PopularSeries = () => {
   return (
     <div className='container mt-5'>
       <h2>Popular Series</h2>
-      <div className="row">
+      <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
           popularSeries.map(serie => (
             <CardMoovie key={serie.id} 
               title={serie.name} 
-              desp={serie.first_air_date}
+              vote={serie.vote_average}
               posterPath={serie.poster_path}/>
           ))
         }
