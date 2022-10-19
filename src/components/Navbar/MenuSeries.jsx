@@ -9,7 +9,7 @@ export const MenuSeries = ({handleShowMenuSeries}) => {
         <div className='container-list navbar navbar-light bg-light rounded-3' >
             <ul>
                 <li>
-                    <Link className='navbar-brand'>Popular</Link>             
+                    <Link to='popular/series' className='navbar-brand'>Popular</Link>             
                 </li>
                 <li>
                     <Link className='navbar-brand'>Top rated</Link>

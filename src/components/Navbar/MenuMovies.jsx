@@ -13,10 +13,10 @@ export const MenuMovies = ({handleShowMenuMovies}) => {
         <div className='container-list navbar navbar-light bg-light rounded-3' >
             <ul>
                 <li>
-                    <Link className='navbar-brand'>Popular</Link>             
+                    <Link to='popular/films' className='navbar-brand'>Popular</Link>             
                 </li>
                 <li>
-                    <Link className='navbar-brand'>Top rated</Link>
+                    <Link to='rated/films' className='navbar-brand'>Top rated</Link>
                 </li>
             </ul>
         </div>

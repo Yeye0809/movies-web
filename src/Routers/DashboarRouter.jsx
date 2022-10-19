@@ -8,6 +8,8 @@ import { ScreenFilms } from '../components/Pages/ScreenFilms';
 import { ScreenSearch } from '../components/Pages/ScreenSearch';
 import { ScreenSeries } from '../components/Pages/ScreenSeries';
 import { Sidebar } from '../components/Sidabar/Sidebar';
+import { PopularsRouter } from './PopularsRouter';
+import { TopRatedRouter } from './TopRatedRouter';
 
 export const DashboarRouter = () => {
   const [showMenuMovies, setShowMenuMovies] = useState(false);
@@ -38,6 +40,8 @@ export const DashboarRouter = () => {
                 <Route path='films' element={<ScreenFilms />}/>
                 <Route path='series' element={<ScreenSeries />}/>
                 <Route path='search' element={<ScreenSearch />}/>
+                <Route path='popular/*' element={<PopularsRouter />}/>
+                <Route path='rated/*' element={<TopRatedRouter />}/>
             </Routes>
         </div>
     </>

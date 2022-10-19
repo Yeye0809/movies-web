@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { CardMoovie } from './CardMoovie'
 
-export const PopularSeries = () => {
+export const PopularSeries = ({counter}) => {  
 
   const [popularSeries, setPopularSeries] = useState([]);
 
   const getPopularSeries = async()=>{
-    const url = 'https://api.themoviedb.org/3/tv/popular?api_key=73c0b8a4dbda53191e7ac8e43ed8a8ec&language=en-US&page=1';
+    const url = `https://api.themoviedb.org/3/tv/popular?api_key=73c0b8a4dbda53191e7ac8e43ed8a8ec&language=en-US&page=${counter}`;
     const res = await fetch(url);
     const data = await res.json();
     
@@ -16,7 +16,7 @@ export const PopularSeries = () => {
   useEffect(()=>{
     getPopularSeries()
     .then(data => setPopularSeries(data.results))
-  },[])
+  },[counter])
 
   
     
