@@ -22,8 +22,7 @@ export const PopularSeries = ({counter}) => {
     
    
   return (
-    <div className='container mt-5'>
-      <h2>Popular Series</h2>
+    <div className='container'>
       <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
           popularSeries.map(serie => (

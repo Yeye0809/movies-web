@@ -20,7 +20,7 @@ export const PopularMovies = ({counter}) => {
 
 
   return (
-    <div className='container mt-5'>
+    <div className='container'>
       <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
           popularMovies.map(movie => (
