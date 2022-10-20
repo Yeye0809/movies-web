@@ -3,17 +3,17 @@ import { useCounter } from '../../Hooks/useCounter';
 import { useFetchRated } from '../../Hooks/useFetchRated'
 import { CardMoovie } from '../Movies/CardMoovie';
 
-export const ScreenRatedFilms = () => {
-  const {ratedFilms, onRated} = useFetchRated();
+export const ScreenRatedSeries = () => {
+  const {ratedSeries, onRatedSeries} = useFetchRated();
   const {counter, backPage, nextPage} = useCounter();
 
   useEffect(()=>{
-    onRated({counter})
-  },[counter])
+    onRatedSeries({counter});
+  },[counter]);
 
   return (
     <div className='col'>
-      <h1>Films</h1>
+      <h1>Series</h1>
       <div className='row'>
         <div className='col'>
           <h2>Top Rated</h2>
@@ -41,11 +41,11 @@ export const ScreenRatedFilms = () => {
       <div className='container'>
         <div className='row rows-cols-1 row-cols-md-2 g-3'>   
           {
-            ratedFilms.map(film => (
-              <CardMoovie key={film.id} 
-                posterPath={film.poster_path} 
-                title={film.title} 
-                vote={film.vote_average} />
+            ratedSeries.map(serie => (
+              <CardMoovie key={serie.id} 
+                posterPath={serie.poster_path} 
+                title={serie.name} 
+                vote={serie.vote_average} />
             ))
           }
         </div>

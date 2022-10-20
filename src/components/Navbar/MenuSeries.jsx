@@ -12,7 +12,7 @@ export const MenuSeries = ({handleShowMenuSeries}) => {
                     <Link to='popular/series' className='navbar-brand'>Popular</Link>             
                 </li>
                 <li>
-                    <Link className='navbar-brand'>Top rated</Link>
+                    <Link to='rated/series' className='navbar-brand'>Top rated</Link>
                 </li>
             </ul>
         </div>

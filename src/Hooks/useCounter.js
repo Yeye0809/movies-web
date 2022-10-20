@@ -9,7 +9,7 @@ export const useCounter = () => {
     const backPage = ()=>{
       setCounter(counter - 1);
     }
-  
+   
     
   return {
     counter,
