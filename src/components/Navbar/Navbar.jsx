@@ -1,7 +1,14 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 export const Navbar = ({handleShowMenuMovies, handleShowMenuSeries}) => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = ()=>{
+    navigate('/login', {replace: true});
+  }
+
   return (
     
     <nav className='navbar navbar-expand-sm navbar-dark bg-dark p-3'>
@@ -38,7 +45,10 @@ export const Navbar = ({handleShowMenuMovies, handleShowMenuSeries}) => {
             <span className='nav-item nav-link text-info'>
               name
             </span>
-            <button className='nav-item nav-link btn'>
+            <button 
+              className='nav-item nav-link btn'
+              onClick={handleLogout}
+              >
               Logout
             </button>
           </ul>
