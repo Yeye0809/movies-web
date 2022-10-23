@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useCounter } from '../../Hooks/useCounter';
 import { useFetchRated } from '../../Hooks/useFetchRated'
-import { CardMoovie } from '../Movies/CardMoovie';
+import { CardSerie } from '../Movies/CardSerie';
 
 export const ScreenRatedSeries = () => {
   const {ratedSeries, onRatedSeries} = useFetchRated();
@@ -42,7 +42,8 @@ export const ScreenRatedSeries = () => {
         <div className='row rows-cols-1 row-cols-md-2 g-3'>   
           {
             ratedSeries.map(serie => (
-              <CardMoovie key={serie.id} 
+              <CardSerie key={serie.id} 
+                id={serie.id}
                 posterPath={serie.poster_path} 
                 title={serie.name} 
                 vote={serie.vote_average} />

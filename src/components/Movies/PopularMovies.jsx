@@ -23,11 +23,13 @@ export const PopularMovies = ({counter}) => {
     <div className='container'>
       <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
-          popularMovies.map(movie => (
+          popularMovies?.map(movie => (
             <CardMoovie key={movie.id} 
+              id={movie.id}
               posterPath={movie.poster_path}
               title={movie.title} 
-              vote={movie.vote_average}/>
+              vote={movie.vote_average}
+              />
           ))
         }
        

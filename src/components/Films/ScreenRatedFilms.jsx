@@ -41,8 +41,9 @@ export const ScreenRatedFilms = () => {
       <div className='container'>
         <div className='row rows-cols-1 row-cols-md-2 g-3'>   
           {
-            ratedFilms.map(film => (
+            ratedFilms?.map(film => (
               <CardMoovie key={film.id} 
+                id={film.id}
                 posterPath={film.poster_path} 
                 title={film.title} 
                 vote={film.vote_average} />

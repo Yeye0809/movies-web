@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const CardMoovie = ({title, vote, posterPath, id}) => {
+export const CardSerie = ({title, vote, posterPath, id}) => {
   return (
     <div className="col">
       <div className='card m-3'>
@@ -16,7 +16,7 @@ export const CardMoovie = ({title, vote, posterPath, id}) => {
                     {title}
                 </h5>
                 <p className="card-text text-muted">{vote}</p>
-                <Link to={`/film/${id}`}>
+                <Link to={`/serie/${id}`}>
                   More...
                 </Link>
             </div>

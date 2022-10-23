@@ -25,7 +25,7 @@ export const Sidebar = () => {
             <h3>Genres</h3>
             <ul>
               {
-                genres.map(genre =>(
+                genres?.map(genre =>(
                     <li key={genre.id}>{genre.name}</li>       
                 ))
               }

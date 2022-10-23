@@ -37,8 +37,8 @@ export const DashboarRouter = () => {
             <Sidebar />
             <Routes>
                 <Route path='movies' element={<ScreenMovies />}/>
-                <Route path='films' element={<ScreenFilms />}/>
-                <Route path='series' element={<ScreenSeries />}/>
+                <Route path='film/:id' element={<ScreenFilms />}/>
+                <Route path='serie/:id' element={<ScreenSeries />}/>
                 <Route path='search' element={<ScreenSearch />}/>
                 <Route path='popular/*' element={<PopularsRouter />}/>
                 <Route path='rated/*' element={<TopRatedRouter />}/>

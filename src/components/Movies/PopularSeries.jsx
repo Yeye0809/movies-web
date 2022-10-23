@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CardMoovie } from './CardMoovie'
+import { CardSerie } from './CardSerie';
 
 export const PopularSeries = ({counter}) => {  
 
@@ -25,8 +25,9 @@ export const PopularSeries = ({counter}) => {
     <div className='container'>
       <div className="row rows-cols-1 row-cols-md-2 g-3">
         {
-          popularSeries.map(serie => (
-            <CardMoovie key={serie.id} 
+          popularSeries?.map(serie => (
+            <CardSerie key={serie.id} 
+              id={serie.id}
               title={serie.name} 
               vote={serie.vote_average}
               posterPath={serie.poster_path}/>
