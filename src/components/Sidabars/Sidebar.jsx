@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import './style.css';
+
 
 export const Sidebar = () => {
   const [genres, setGenres] = useState([]);
@@ -22,11 +23,13 @@ export const Sidebar = () => {
   return (
     <div className='col-2 p-5'>
         <div>
-            <h3>Genres</h3>
-            <ul>
+            <h3>Genres Films</h3>
+            <ul className='list-group'>
               {
                 genres?.map(genre =>(
-                    <li key={genre.id}>{genre.name}</li>       
+                    <li className='list-group-item' key={genre.id}>
+                      <Link to={`/genres/films/${genre.id}`} className='nav-item nav-link'>{genre.name}</Link> 
+                    </li>       
                 ))
               }
             </ul>

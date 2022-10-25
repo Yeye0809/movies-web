@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import { ScreenPopularFilms } from '../components/Films/ScreenPopularFilms'
 import { ScreenPopularSeries } from '../components/Series/ScreenPopularSeries'

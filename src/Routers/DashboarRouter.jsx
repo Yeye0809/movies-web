@@ -7,7 +7,9 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { ScreenFilms } from '../components/Pages/ScreenFilms';
 import { ScreenSearch } from '../components/Pages/ScreenSearch';
 import { ScreenSeries } from '../components/Pages/ScreenSeries';
-import { Sidebar } from '../components/Sidabar/Sidebar';
+import { Sidebar } from '../components/Sidabars/Sidebar';
+import { SidebarRight } from '../components/Sidabars/SidebarRight';
+import { GenresRouter } from './GenresRouter';
 import { PopularsRouter } from './PopularsRouter';
 import { TopRatedRouter } from './TopRatedRouter';
 
@@ -42,7 +44,9 @@ export const DashboarRouter = () => {
                 <Route path='search' element={<ScreenSearch />}/>
                 <Route path='popular/*' element={<PopularsRouter />}/>
                 <Route path='rated/*' element={<TopRatedRouter />}/>
+                <Route path='genres/*' element={<GenresRouter />}/>
             </Routes>
+            <SidebarRight />
         </div>
     </>
   )

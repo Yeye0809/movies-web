@@ -34,13 +34,12 @@ export const ScreenFilms = () => {
              <ul className='list-group list-group-flush mb-3'>
                 <li className="list-group-item">{release_date}</li>
                 <li className="list-group-item">{vote_average}</li>
-                {/* <li className="list-group-item">{ genres?.map( genre =>( <spam>{genre.name}</spam>))}</li> */}
              </ul>
              <p className='mb-3'>{overview}</p>
              <div className='mb-5'>
               {
                 genres?.map(genre => (
-                  <Link className='me-3' key={genre.id}>{genre.name}</Link>
+                  <Link className='me-3' to={`/genres/films/${genre.id}`} key={genre.id}>{genre.name}</Link>
                 ))
               }
              </div>
